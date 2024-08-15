@@ -1,0 +1,28 @@
+
+  
+ 
+
+  .upi-icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .upi-icon {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  .modal.fade.show {
+    display: block !important;
+  }
+
+  .modal-backdrop {
+    position: inherit;
+  }
+
+  .modal-content {
+    margin-top: 100px;
+  }

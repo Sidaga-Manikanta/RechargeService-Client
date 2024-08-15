@@ -110,3 +110,16 @@
 
 
 
+  .navbarbutton {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; /* Adjusts space between buttons */
+  }
+  
+  @media (max-width: 767.98px) {
+    .navbarbutton .btn {
+      flex: 1 1 auto; /* Allows buttons to scale down as needed */
+      margin-bottom: 5px; /* Adds space between rows of buttons */
+    }
+  }
+  

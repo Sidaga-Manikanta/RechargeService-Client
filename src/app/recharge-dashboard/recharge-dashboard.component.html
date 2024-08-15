@@ -70,26 +70,28 @@
           <h2>Recharge Plans</h2>
         </div>
       </div>
-      <div class="col-md-10">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <!-- Navbar Start -->
-          <nav class="navbar navbar-expand-md navbar-light">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <div class="btn-group navbarbutton">
-                <button class="btn" (click)="onCategoryChange('Unlimited')">Unlimited</button>
-                <button class="btn" (click)="onCategoryChange('Data')">Data</button>
-                <button class="btn" (click)="onCategoryChange('Data_Booster')">Data Booster</button>
-                <button class="btn" (click)="onCategoryChange('Talk_Time')">Talk Time</button>
-                <button class="btn" (click)="onCategoryChange('True_5G')">True 5G</button>
-                <button class="btn" (click)="onCategoryChange('International_Roaming')">International Roaming</button>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand-md navbar-light w-70">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="btn-group navbarbutton flex-wrap w-100">
+                  <button class="btn btn-light flex-fill" (click)="onCategoryChange('Unlimited')">Unlimited</button>
+                  <button class="btn btn-light flex-fill" (click)="onCategoryChange('Data')">Data</button>
+                  <button class="btn btn-light flex-fill" (click)="onCategoryChange('Data_Booster')">Data Booster</button>
+                  <button class="btn btn-light flex-fill" (click)="onCategoryChange('Talk_Time')">Talk Time</button>
+                  <button class="btn btn-light flex-fill" (click)="onCategoryChange('True_5G')">True 5G</button>
+                  <button class="btn btn-light flex-fill" (click)="onCategoryChange('International_Roaming')">International Roaming</button>
+                </div>
               </div>
-            </div>
-          </nav>
-          <!-- Navbar End -->
+            </nav>
+            <!-- Navbar End -->
+          </div>
         </div>
       </div>
 
@@ -98,7 +100,7 @@
         <div class="col-md-3 mb-4" *ngFor="let plan of plans">
           <div class="card plan-card text-center">
             <div>
-              <img src="Icons/s5g-icon.jpeg" class="card-img" alt="Plan Image">
+              <img src="../Icons/s5g-icon.jpeg" class="card-img" alt="Plan Image">
               <b style="color: greeny;"> {{ plan.plan_Price | currency:'INR':'symbol' }} </b>
             </div>
             <div class="card-body">
@@ -108,7 +110,7 @@
               <p class="card-text">Data: {{ plan.plan_Data }}</p>
               <p class="card-text">SMS: {{ plan.plan_Sms }}</p>
               <div class="card-footer">
-                <a  class="btn btn-link viewDetailsLink" (click)="openModal(plan)">View Details</a>
+                <a class="btn btn-link viewDetailsLink" (click)="openModal(plan)">View Details</a>
                 <button class="btn btn-primary rechargeButton" (click)="recharge(plan.plan_Id)">Recharge</button>
               </div>
             </div>
