@@ -25,7 +25,7 @@ export class RechargeDashboardComponent implements OnInit {
   num: number = 0;
   plans: Plan[] = [];
   planId!: number;
-  selectedCategory: string ='Unlimited'; 
+  selectedCategory: string = 'unlimited'; 
   searchQuery!: string;
   activePlans: any[] = [];
   selectedPlan: Plan | null = null;
