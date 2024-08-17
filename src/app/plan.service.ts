@@ -7,10 +7,10 @@ import { Plan } from './plan';
   providedIn: 'root'
 })
 export class PlanService {
-  // private baseUrl = 'https://service1-sjlm.onrender.com/plans';
+  private baseUrl = 'https://service1-sjlm.onrender.com/plans';
 
 
-  private baseUrl = 'http://localhost:8090/plans';
+  // private baseUrl = 'http://localhost:8090/plans';
 
 
   constructor(private http: HttpClient) {}
