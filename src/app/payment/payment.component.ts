@@ -22,7 +22,7 @@ export class PaymentComponent implements OnInit {
   planId!: number;
   selectedPlan: Plan = new Plan();
   showModal = false;
-  mobileNumber!: number;
+  mobileNumber!: Number;
 
 
   showUpiInput = false;

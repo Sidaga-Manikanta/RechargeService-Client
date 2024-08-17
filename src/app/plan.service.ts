@@ -7,10 +7,10 @@ import { Plan } from './plan';
   providedIn: 'root'
 })
 export class PlanService {
-  private baseUrl = 'https://service1-sjlm.onrender.com/plans';
+  // private baseUrl = 'https://service1-sjlm.onrender.com/plans';
 
 
-  // private baseUrl = 'http://localhost:8090/plans';
+  private baseUrl = 'http://localhost:8090/plans';
 
 
   constructor(private http: HttpClient) {}
@@ -25,7 +25,7 @@ export class PlanService {
   getPlanById(planId:number):Observable<Plan>{
     return this.http.get<Plan>(`${this.baseUrl}/plan/${planId}`);
   }
-  transferSucessRecharge(mobileNumber: number, planId:number):Observable<boolean>{
+  transferSucessRecharge(mobileNumber: Number, planId:number):Observable<boolean>{
     const payLoad = {
       mobileNumber: mobileNumber,
       planId: planId
